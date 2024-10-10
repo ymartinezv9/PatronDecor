@@ -1,6 +1,17 @@
 # PatronDecor
 Explicacion y ejemplo de uso del patron deseño Decor
 
+# Índice
+
+1. [¿Qué es el patrón Decorator?](#1-¿qué-es-el-patrón-decorator)
+2. [Ventajas del patrón Decorator](#2-ventajas-del-patrón-decorator)
+3. [Ejemplo del Patrón Decorator: Estudiantes de la UMG](#3-ejemplo-del-patrón-decorator-estudiantes-de-la-umg)
+   - [Código en Java](#código-en-java)
+   - [Resultado en consola](#resultado-en-consola)
+4. [Explicación](#explicación)
+5. [Conclusión](#conclusión)
+
+   
 ## 1. ¿Qué es el patrón Decorator?
 El patrón **Decorator** es un patrón de diseño estructural que permite añadir comportamientos adicionales a un objeto de forma dinámica sin alterar su estructura original. 
 En lugar de utilizar herencia para extender las funcionalidades, el patrón Decorator se basa en la composición, envolviendo objetos con decoradores que añaden nuevas características.
@@ -110,12 +121,6 @@ public class Main {
     }
 }
 ```
-### Explicación:
-- **Estudiante**: Es la interfaz base que define las características de los estudiantes.
-- **EstudianteUMG**: Es el componente concreto, que representa a un estudiante regular de la UMG.
-- **EstudianteDecorador**: Es una clase abstracta que implementa la interfaz `Estudiante` y sirve como base para los decoradores.
-- **EstudianteConBeca**: Es un decorador concreto que añade la funcionalidad de "Estudiante con Beca", aplicando un descuento en la matrícula.
-- **EstudianteConClub**: Es otro decorador concreto que añade la funcionalidad de "Miembro del Club de Tecnología", lo que añade un costo extra.
 
 ### Resultado en consola:
 ```bash
@@ -123,6 +128,15 @@ Estudiante de la UMG - Costo: $1500.0
 Estudiante de la UMG, con Beca - Costo: $800.0
 Estudiante de la UMG, con Beca, miembro del Club de Tecnología - Costo: $1100.0
 ```
+
+### Explicación:
+- **Estudiante**: Es la interfaz base que define las características de los estudiantes.
+- **EstudianteUMG**: Es el componente concreto, que representa a un estudiante regular de la UMG.
+- **EstudianteDecorador**: Es una clase abstracta que implementa la interfaz `Estudiante` y sirve como base para los decoradores.
+- **EstudianteConBeca**: Es un decorador concreto que añade la funcionalidad de "Estudiante con Beca", aplicando un descuento en la matrícula.
+- **EstudianteConClub**: Es otro decorador concreto que añade la funcionalidad de "Miembro del Club de Tecnología", lo que añade un costo extra.
+
+
 ### Conclusión
 El patrón **Decorator** es una solución eficaz para agregar comportamientos adicionales a un objeto de forma dinámica y flexible, sin modificar su estructura interna. En este ejemplo, los estudiantes de la UMG pueden tener características adicionales como ser becados o miembros de un club, y estas características pueden combinarse según sea necesario.
 
